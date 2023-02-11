@@ -12,6 +12,7 @@ abstract class UserState {
     abstract val role: MemberRole
 }
 
+@Stable
 data class DriverState(
     override val id: String,
     override val name: String,
@@ -35,6 +36,7 @@ data class DriverState(
     }
 }
 
+@Stable
 data class PassengerState(
     override val id: String,
     override val name: String,

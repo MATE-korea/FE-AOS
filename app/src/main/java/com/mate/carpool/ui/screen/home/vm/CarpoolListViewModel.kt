@@ -80,7 +80,7 @@ class CarpoolListViewModel @Inject constructor(
         }.launchIn(viewModelScope)
 
 
-    private fun getMemberModel() = memberRepository.getMyProfileNew().onEach { userModel ->
+    private fun getMemberModel() = memberRepository.getMyProfile().onEach { userModel ->
             _uiState.update { state ->
                 state.copy(userState = userModel.asUserStateItem())
             }

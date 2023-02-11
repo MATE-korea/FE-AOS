@@ -41,7 +41,10 @@ interface APIService {
     suspend fun getTicketList(): List<TicketListDTO>
 
     @GET("member")
-    suspend fun getMyProfileNew(): ProfileDTO
+    suspend fun getMyProfile(): ProfileDTO
+
+    @GET("driver/{memberId}")
+    suspend fun getDriverProfile(): DriverDTO
 
     @GET("carpool/promise")
     suspend fun getMyTicket(): TicketDetailDTO
@@ -67,17 +70,6 @@ interface APIService {
     /**
      * refactor
      */
-
-    @GET("member/check/class/{studentNumber}")
-    suspend fun checkIsStudentNumberExists(
-        @Path("studentNumber") studentNumber: String
-    ): ResponseMessage
-
-    @GET("member/me")
-    suspend fun getMemberMe(): MemberProfileDTO
-
-    @GET("member/me")
-    suspend fun getMyProfile(): ProfileDto
 
     @PUT("member/update/profile")
     suspend fun updateProfile(@Body body: UpdateMyProfileRequest): ResponseMessage

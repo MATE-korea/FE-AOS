@@ -1,12 +1,11 @@
 package com.mate.carpool.ui.screen.profile.lookup
 
-import android.net.Uri
 import androidx.lifecycle.viewModelScope
 import com.mate.carpool.data.Result
-import com.mate.carpool.data.model.domain.Profile
 import com.mate.carpool.data.repository.MemberRepository
 import com.mate.carpool.ui.base.BaseViewModel
 import com.mate.carpool.ui.base.SnackBarMessage
+import com.mate.carpool.data.model.domain.Profile
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -27,22 +26,9 @@ class ProfileLookUpViewModel @Inject constructor(
         fetch()
     }
 
-    fun fetch() {
-        memberRepository.getMyProfile().onEach { result ->
-            when (result) {
-                is Result.Loading -> {
-                }
+    fun fetch() = memberRepository.getMyProfile().onEach { result ->
 
-                is Result.Success -> {
-                    _profile.value = result.data
-                }
-
-                is Result.Error -> {
-                    emitSnackbar(SnackBarMessage(headerMessage = result.message))
-                }
-            }
-        }.launchIn(viewModelScope)
-    }
+    }.launchIn(viewModelScope)
 
     // TODO 프로필 이미지 압축
     fun setProfileImage(part: MultipartBody.Part) {

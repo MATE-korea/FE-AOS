@@ -1,7 +1,9 @@
 package com.mate.carpool.ui.screen.createCarpool.item
 
+import androidx.compose.runtime.Stable
 import com.mate.carpool.data.model.item.DayStatus
 
+@Stable
 data class TimeUiState(
     val hour: Int,
     val min: Int,

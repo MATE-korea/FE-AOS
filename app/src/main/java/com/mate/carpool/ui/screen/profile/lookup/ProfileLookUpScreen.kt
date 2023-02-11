@@ -16,7 +16,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mate.carpool.data.model.item.TicketType
 import com.mate.carpool.data.model.item.DayStatus
-import com.mate.carpool.data.model.domain.Profile
 import com.mate.carpool.data.model.domain.StartArea
 import com.mate.carpool.data.model.domain.Ticket
 import com.mate.carpool.data.model.item.TicketStatus
@@ -27,6 +26,7 @@ import com.mate.carpool.ui.screen.profile.lookup.component.HistoryHeaderItem
 import com.mate.carpool.ui.screen.profile.lookup.component.TopAppBar
 import com.mate.carpool.ui.screen.profile.lookup.component.UserBottomInfoItem
 import com.mate.carpool.ui.screen.profile.lookup.component.UserTopInfoItem
+import com.mate.carpool.data.model.domain.Profile
 import com.mate.carpool.ui.theme.primary10
 import com.mate.carpool.ui.theme.white
 import com.mate.carpool.ui.util.date

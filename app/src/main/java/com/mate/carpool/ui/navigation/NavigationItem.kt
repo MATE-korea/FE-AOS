@@ -1,5 +1,8 @@
 package com.mate.carpool.ui.navigation
 
+import androidx.compose.runtime.Stable
+
+@Stable
 sealed class NavigationItem(
     val title:String,
     val route:String

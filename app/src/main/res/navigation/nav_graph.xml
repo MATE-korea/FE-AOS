@@ -126,13 +126,13 @@
         android:id="@+id/profileLookUpFragment"
         android:name="com.mate.carpool.ui.screen.profile.lookup.ProfileLookUpFragment"
         android:label="ProfileFragment">
-        <action
-            android:id="@+id/action_profileLookUpFragment_to_profileModifyFragment"
-            app:destination="@id/profileModifyFragment" />
         <argument
             android:name="needRefresh"
             android:defaultValue="false"
             app:argType="boolean" />
+        <action
+            android:id="@+id/action_profileLookUpFragment_to_profileModifyFragment"
+            app:destination="@id/profileModifyFragment" />
         <action
             android:id="@+id/action_profileLookUpFragment_to_homeFragment"
             app:destination="@id/homeFragment"

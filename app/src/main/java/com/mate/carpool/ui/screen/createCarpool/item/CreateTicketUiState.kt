@@ -1,10 +1,8 @@
 package com.mate.carpool.ui.screen.createCarpool.item
 
-import com.mate.carpool.data.model.domain.domain.TicketModel
-import com.mate.carpool.ui.util.hour
-import com.mate.carpool.ui.util.minute
-import java.util.*
+import androidx.compose.runtime.Stable
 
+@Stable
 data class CreateTicketUiState(
     val driverName: String,
     val driverProfile: String,
